@@ -259,7 +259,7 @@
           rotation: 0
         };
       }
-      var rect = node.getClientRect({ skipTransform: true });
+      var rect = node.getClientRect({ skipTransform: true, relativeTo: node.getStage() });
       var rotation = Konva.getAngle(node.rotation());
 
       var dx = rect.x * node.scaleX() - node.offsetX() * node.scaleX();
